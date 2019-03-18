@@ -14,6 +14,10 @@ public class Colour {
         this.rgb = ((red << RED_SHIFT) & RED_MASK) | ((green << GREEN_SHIFT) & GREEN_MASK) | ((blue << BLUE_SHIFT) & BLUE_MASK);
     }
 
+    public Colour(int rgb) {
+        this.rgb = rgb;
+    }
+
     public byte getRed() {
         return (byte) ((rgb & RED_MASK) >> (RED_SHIFT));
     }
@@ -24,5 +28,9 @@ public class Colour {
 
     public byte getBlue() {
         return (byte) ((rgb & BLUE_MASK) >> (BLUE_SHIFT));
+    }
+
+    public int getRGB() {
+        return rgb;
     }
 }

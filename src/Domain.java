@@ -1,21 +1,38 @@
 public class Domain {
 
-    private int start;
-    private int end;
-    private boolean allRealNumbers;
+    private double start;
+    private double end;
+    private boolean includeStart;
+    private boolean includeEnd;
 
     public Domain() {
-        this.allRealNumbers = true;
+        this(Double.NEGATIVE_INFINITY, Double.POSITIVE_INFINITY, false, false);
     }
 
-    public Domain(int start, int end) {
+    public Domain(double start, double end, boolean includeStart, boolean includeEnd) {
         this.start = Math.min(start, end);
         this.end = Math.max(start, end);
-        this.allRealNumbers = false;
+        this.includeStart = includeStart;
+        this.includeEnd = includeEnd;
     }
 
     public boolean inDomain(int check) {
         return (check >= start && check <= end);
     }
 
+    public double getStart() {
+        return start;
+    }
+
+    public double getEnd() {
+        return end;
+    }
+
+    public boolean isIncludeStart() {
+        return includeStart;
+    }
+
+    public boolean isIncludeEnd() {
+        return includeEnd;
+    }
 }
