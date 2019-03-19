@@ -5,7 +5,10 @@ import org.junit.runners.Suite;
 @Suite.SuiteClasses({
         QuadraticTest.class,
         LinearTest.class,
-        ArcTest.class
+        ArcTest.class,
+        LogarithmTest.class,
+        CubicTest.class,
+        ParabolaTest.class
 })
 
 public class FunctionsTests {
