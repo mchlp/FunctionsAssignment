@@ -1,7 +1,7 @@
 /*
  * Author: Michael Pu
  * Teacher: Mr. Radulovic
- * Date: 2019/3/18
+ * Date: 2019/3/19
  * Course: ICS4U
  */
 
@@ -27,7 +27,7 @@ public class Quadratic extends Function {
 
     @Override
     public double derivative(double x) {
-        return 2 * this.a * x - 2 * a * this.x1 + this.b;
+        return 2 * this.a * (x - this.x1) + this.b;
     }
 
     @Override

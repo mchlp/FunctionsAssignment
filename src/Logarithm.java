@@ -1,7 +1,7 @@
 /*
  * Author: Michael Pu
  * Teacher: Mr. Radulovic
- * Date: 2019/3/18
+ * Date: 2019/3/19
  * Course: ICS4U
  */
 
@@ -25,7 +25,7 @@ public class Logarithm extends Function {
 
     @Override
     public double derivative(double x) {
-        return 0;
+        return (this.a) / (x - this.x1);
     }
 
     @Override

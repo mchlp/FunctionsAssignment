@@ -1,7 +1,7 @@
 /*
  * Author: Michael Pu
  * Teacher: Mr. Radulovic
- * Date: 2019/3/18
+ * Date: 2019/3/19
  * Course: ICS4U
  */
 
@@ -29,7 +29,7 @@ public class Cubic extends Function {
 
     @Override
     public double derivative(double x) {
-        return 0;
+        return (3*this.a*Math.pow(x-this.x1, 2)) + (2*this.b*(x-this.x1)) + this.c;
     }
 
     @Override
