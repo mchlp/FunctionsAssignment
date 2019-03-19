@@ -19,6 +19,8 @@ public class CubicTest {
     public void test_toString() {
         Cubic cubic = new Cubic(2, 5, 1, 1, 7);
         assertEquals("2.000(x - 7.000)^3 + 5.000(x - 7.000)^2 + 1.000(x - 7.000) + 1.000", cubic.toString());
+        cubic = new Cubic(2, -5, -1, 1, 7);
+        assertEquals("2.000(x - 7.000)^3 - 5.000(x - 7.000)^2 - 1.000(x - 7.000) + 1.000", cubic.toString());
         cubic = new Cubic(2, 5, 1, -1, -7);
         assertEquals("2.000(x + 7.000)^3 + 5.000(x + 7.000)^2 + 1.000(x + 7.000) - 1.000", cubic.toString());
     }

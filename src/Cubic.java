@@ -34,6 +34,6 @@ public class Cubic extends Function {
 
     @Override
     public String toString() {
-        return String.format("%.3f(x %s)^3 + %.3f(x %s)^2 + %.3f(x %s) %s", this.a, formatNumber(this.x1, true), this.b, formatNumber(this.x1, true), this.c, formatNumber(this.x1, true), formatNumber(this.d, false));
+        return String.format("%.3f(x %s)^3 %s(x %s)^2 %s(x %s) %s", this.a, formatNumber(this.x1, true), formatNumber(this.b, false), formatNumber(this.x1, true), formatNumber(this.c, false), formatNumber(this.x1, true), formatNumber(this.d, false));
     }
 }
