@@ -1,3 +1,10 @@
+/*
+ * Author: Michael Pu
+ * Teacher: Mr. Radulovic
+ * Date: 2019/3/18
+ * Course: ICS4U
+ */
+
 public class Linear extends Function {
 
     private double m;
@@ -12,11 +19,8 @@ public class Linear extends Function {
     }
 
     @Override
-    public double value(double x) {
-        if (!undefined(x)) {
-            return (this.m * (x - this.x1)) + this.b;
-        }
-        return Double.NaN;
+    protected double getFunctionValue(double x) {
+        return (this.m * (x - this.x1)) + this.b;
     }
 
     @Override
@@ -26,6 +30,6 @@ public class Linear extends Function {
 
     @Override
     public String toString() {
-        return String.format("%.3f(x - %.3f) + %.3f", this.m, this.x1, this.b);
+        return String.format("%.3f(x %s) %s", this.m, formatNumber(this.x1, true), formatNumber(this.b, false));
     }
 }

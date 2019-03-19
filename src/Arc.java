@@ -1,10 +1,17 @@
+/*
+ * Author: Michael Pu
+ * Teacher: Mr. Radulovic
+ * Date: 2019/3/18
+ * Course: ICS4U
+ */
+
 public class Arc extends Function {
 
     private double r;
-    private double xcenter;
     private double ycenter;
+    private double xcenter;
 
-    public Arc (double r, double xcenter, double ycenter) {
+    public Arc(double r, double xcenter, double ycenter) {
         super(xcenter - r, xcenter + r);
         this.r = r;
         this.xcenter = xcenter;
@@ -12,7 +19,7 @@ public class Arc extends Function {
     }
 
     @Override
-    public double value(double x) {
+    protected double getFunctionValue(double x) {
         return Math.sqrt(Math.pow(this.r, 2) - Math.pow(x - this.xcenter, 2)) + this.ycenter;
     }
 
@@ -23,6 +30,6 @@ public class Arc extends Function {
 
     @Override
     public String toString() {
-        return String.format("√(%.3f^2 - (x - %.3f)^2) + %.3f", this.r, this.xcenter, this.ycenter);
+        return String.format("√(%.3f^2 - (x %s)^2) %s", this.r, formatNumber(this.xcenter, true), formatNumber(this.ycenter, false));
     }
 }

@@ -1,13 +1,16 @@
+/*
+ * Author: Michael Pu
+ * Teacher: Mr. Radulovic
+ * Date: 2019/3/18
+ * Course: ICS4U
+ */
+
 public class Domain {
 
     private double start;
     private double end;
     private boolean includeStart;
     private boolean includeEnd;
-
-    public Domain() {
-        this(Double.NEGATIVE_INFINITY, Double.POSITIVE_INFINITY, false, false);
-    }
 
     public Domain(double start, double end, boolean includeStart, boolean includeEnd) {
         this.start = Math.min(start, end);
@@ -16,8 +19,23 @@ public class Domain {
         this.includeEnd = includeEnd;
     }
 
-    public boolean inDomain(int check) {
-        return (check >= start && check <= end);
+    public boolean inDomain(double check) {
+        boolean insideStart;
+        boolean insideEnd;
+
+        if (isIncludeStart()) {
+            insideStart = getStart() <= check;
+        } else {
+            insideStart = getStart() < check;
+        }
+
+        if (isIncludeEnd()) {
+            insideEnd = getEnd() >= check;
+        } else {
+            insideEnd = getEnd() > check;
+        }
+
+        return !(insideStart && insideEnd);
     }
 
     public double getStart() {

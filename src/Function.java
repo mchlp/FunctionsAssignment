@@ -1,7 +1,18 @@
+/*
+ * Author: Michael Pu
+ * Teacher: Mr. Radulovic
+ * Date: 2019/3/18
+ * Course: ICS4U
+ */
+
 public abstract class Function {
     private Domain domain;
     private String name;
     private Colour colour;
+
+    protected static String formatNumber(double num, boolean reverseSign) {
+        return String.format("%c %.3f", (num >= 0 == reverseSign) ? '-' : '+', Math.abs(num));
+    }
 
     protected Function(double x1, double x2) {
         setDomain(x1, x2);
@@ -11,7 +22,16 @@ public abstract class Function {
         setDomain(x1, x2, includex1, includex2);
     }
 
-    public abstract double value(double x);
+    // Returns NaN if undefined, otherwise calls getFunctionValue in child class
+    public double value(double x) {
+        if (!undefined(x)) {
+            return getFunctionValue(x);
+        }
+        return Double.NaN;
+    }
+
+    // To be called by class internally
+    protected abstract double getFunctionValue(double x);
 
     public abstract double derivative(double x);
 
@@ -34,22 +54,7 @@ public abstract class Function {
     }
 
     public boolean undefined(double x) {
-        boolean insideStart;
-        boolean insideEnd;
-
-        if (domain.isIncludeStart()) {
-            insideStart = domain.getStart() <= x;
-        } else {
-            insideStart = domain.getStart() < x;
-        }
-
-        if (domain.isIncludeEnd()) {
-            insideEnd = domain.getEnd() >= x;
-        } else {
-            insideEnd = domain.getEnd() > x;
-        }
-
-        return !(insideStart && insideEnd);
+        return this.domain.inDomain(x);
     }
 
     public void setColour(int colour) {
