@@ -1,6 +1,6 @@
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class LinearTest {
     @Test
@@ -12,7 +12,11 @@ public class LinearTest {
     @Test
     public void derivative() {
         Linear linear = new Linear(2, 5, 3);
-        assertEquals(0, linear.derivative(11), FunctionsTests.DOUBLE_TOLERANCE);
+        assertEquals(2, linear.derivative(11), FunctionsTests.DOUBLE_TOLERANCE);
+        linear = new Linear(5, 5, 3);
+        assertEquals(5, linear.derivative(11), FunctionsTests.DOUBLE_TOLERANCE);
+        linear = new Linear(-7, 5, 3);
+        assertEquals(-7, linear.derivative(11), FunctionsTests.DOUBLE_TOLERANCE);
     }
 
     @Test

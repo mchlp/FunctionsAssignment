@@ -10,16 +10,16 @@ public abstract class Function {
     private String name;
     private Colour colour;
 
-    protected static String formatNumber(double num, boolean reverseSign) {
-        return String.format("%c %.3f", (num >= 0 == reverseSign) ? '-' : '+', Math.abs(num));
-    }
-
     protected Function(double x1, double x2) {
         setDomain(x1, x2);
     }
 
     protected Function(double x1, double x2, boolean includex1, boolean includex2) {
         setDomain(x1, x2, includex1, includex2);
+    }
+
+    protected static String formatNumber(double num, boolean reverseSign) {
+        return String.format("%c %.3f", (num >= 0 == reverseSign) ? '-' : '+', Math.abs(num));
     }
 
     // Returns NaN if undefined, otherwise calls getFunctionValue in child class
@@ -57,20 +57,20 @@ public abstract class Function {
         return this.domain.inDomain(x);
     }
 
-    public void setColour(int colour) {
-        this.colour = new Colour(colour);
-    }
-
     public int getColour() {
         return this.colour.getRGB();
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setColour(int colour) {
+        this.colour = new Colour(colour);
     }
 
     public String getName() {
         return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
 }

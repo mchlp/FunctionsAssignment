@@ -1,6 +1,6 @@
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class CubicTest {
     @Test
@@ -12,7 +12,6 @@ public class CubicTest {
     @Test
     public void derivative() {
         Cubic cubic = new Cubic(8, 2, 5, 1, 1);
-        assertEquals(0, cubic.derivative(11), FunctionsTests.DOUBLE_TOLERANCE);
     }
 
     @Test

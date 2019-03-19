@@ -25,7 +25,7 @@ public class Linear extends Function {
 
     @Override
     public double derivative(double x) {
-        return 0;
+        return m;
     }
 
     @Override

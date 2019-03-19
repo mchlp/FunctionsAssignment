@@ -17,7 +17,7 @@ public class FunctionTester {
 
         Quadratic quadratic = new Quadratic(0.25, -0.5, -1.0, 0);
 
-        Cubic cubic = new Cubic(0.35, 0.25, -0.5, -1.0 ,2);
+        Cubic cubic = new Cubic(0.35, 0.25, -0.5, -1.0, 2);
 
         Logarithm logarithm = new Logarithm(1, 0, 0);
 

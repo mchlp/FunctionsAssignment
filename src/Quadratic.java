@@ -27,7 +27,7 @@ public class Quadratic extends Function {
 
     @Override
     public double derivative(double x) {
-        return 0;
+        return 2 * this.a * x - 2 * a * this.x1 + this.b;
     }
 
     @Override
