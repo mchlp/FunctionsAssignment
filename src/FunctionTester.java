@@ -8,9 +8,19 @@
 public class FunctionTester {
 
     public static void main(String[] args) {
-        Logarithm logarithm = new Logarithm(2, 3, 1);
-        System.out.println(logarithm);
-        System.out.println(logarithm.undefined(0.999));
+
+        Parabola parabola = new Parabola(1, 0, 0);
+
+        Linear linear = new Linear(1, 1, 0);
+
+        Arc arc = new Arc(4, 0, -2);
+
+        Quadratic quadratic = new Quadratic(0.25, -0.5, -1.0, 0);
+
+        Cubic cubic = new Cubic(0.35, 0.25, -0.5, -1.0 ,2);
+
+        Logarithm logarithm = new Logarithm(1, 0, 0);
+
     }
 
 }
