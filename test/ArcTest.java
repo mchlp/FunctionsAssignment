@@ -12,8 +12,9 @@ public class ArcTest {
 
     @Test
     public void derivative() {
-        Arc arc = new Arc(2, 5, 3);
-        assertEquals(0, arc.derivative(11), FunctionsTests.DOUBLE_TOLERANCE);
+        Arc arc = new Arc(10, 3, 2);
+        assertEquals(0.100503782, arc.derivative(2), FunctionsTests.DOUBLE_TOLERANCE);
+        assertEquals(0, arc.derivative(3), FunctionsTests.DOUBLE_TOLERANCE);
     }
 
     @Test

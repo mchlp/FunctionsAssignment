@@ -12,7 +12,7 @@ public class QuadraticTest {
     @Test
     public void derivative() {
         Quadratic quadratic = new Quadratic(2, 5, 1, 1);
-        assertEquals(0, quadratic.derivative(11), FunctionsTests.DOUBLE_TOLERANCE);
+        assertEquals(45, quadratic.derivative(11), FunctionsTests.DOUBLE_TOLERANCE);
     }
 
     @Test

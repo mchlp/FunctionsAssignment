@@ -12,7 +12,7 @@ public class ParabolaTest {
     @Test
     public void derivative() {
         Parabola parabola = new Parabola(2, 5, 1);
-        assertEquals(0, parabola.derivative(11), FunctionsTests.DOUBLE_TOLERANCE);
+        assertEquals(40, parabola.derivative(11), FunctionsTests.DOUBLE_TOLERANCE);
     }
 
     @Test

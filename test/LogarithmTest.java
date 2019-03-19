@@ -12,7 +12,7 @@ public class LogarithmTest {
     @Test
     public void derivative() {
         Logarithm logarithm = new Logarithm(2, 5, 3);
-        assertEquals(0, logarithm.derivative(11), FunctionsTests.DOUBLE_TOLERANCE);
+        assertEquals(0.25, logarithm.derivative(11), FunctionsTests.DOUBLE_TOLERANCE);
     }
 
     @Test

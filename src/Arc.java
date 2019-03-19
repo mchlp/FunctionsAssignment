@@ -25,7 +25,7 @@ public class Arc extends Function {
 
     @Override
     public double derivative(double x) {
-        return (x - this.xcenter) * Math.pow(Math.pow(x - this.xcenter, 2) - (this.r * this.r), -0.5);
+        return -(x - this.xcenter) * Math.pow((this.r * this.r) - Math.pow(x - this.xcenter, 2), -0.5);
     }
 
     @Override
