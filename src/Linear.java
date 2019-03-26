@@ -34,6 +34,6 @@ public class Linear extends Function {
 
     @Override
     public String toString() {
-        return String.format("%.3f(x %s) %s", this.m, formatNumber(this.x1, true), formatNumber(this.b, false));
+        return String.format(TO_STRING_NUMBER_FORMAT + "*(x %s) %s", this.m, formatNumber(this.x1, true), formatNumber(this.b, false));
     }
 }

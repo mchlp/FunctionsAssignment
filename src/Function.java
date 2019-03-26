@@ -11,20 +11,27 @@
  */
 
 public abstract class Function {
+
+    public static final String TO_STRING_NUMBER_FORMAT = "%.3f";
+
     private Domain domain;
     private String name;
     private Colour colour;
 
     protected Function(double x1, double x2) {
+        this.colour = new Colour(0);
+        this.name = "";
         setDomain(x1, x2);
     }
 
     protected Function(double x1, double x2, boolean includex1, boolean includex2) {
+        this.colour = new Colour(0);
+        this.name = "";
         setDomain(x1, x2, includex1, includex2);
     }
 
     protected static String formatNumber(double num, boolean reverseSign) {
-        return String.format("%c %.3f", (num >= 0 == reverseSign) ? '-' : '+', Math.abs(num));
+        return String.format("%c " + TO_STRING_NUMBER_FORMAT, (num >= 0 == reverseSign) ? '-' : '+', Math.abs(num));
     }
 
     // Returns NaN if undefined, otherwise calls getFunctionValue in child class
@@ -68,7 +75,7 @@ public abstract class Function {
     }
 
     public boolean undefined(double x) {
-        return !this.domain.inDomain(x);
+        return !(this.domain.inDomain(x) && Double.isFinite(getFunctionValue(x)));
     }
 
     public int getColour() {

@@ -18,8 +18,8 @@ public class LogarithmTest {
     @Test
     public void test_toString() {
         Logarithm logarithm = new Logarithm(3, 5, 3);
-        assertEquals("3.000ln(x - 3.000) + 5.000", logarithm.toString());
+        assertEquals("3.000*ln(x - 3.000) + 5.000", logarithm.toString());
         logarithm = new Logarithm(2, 5, -5);
-        assertEquals("2.000ln(x + 5.000) + 5.000", logarithm.toString());
+        assertEquals("2.000*ln(x + 5.000) + 5.000", logarithm.toString());
     }
 }

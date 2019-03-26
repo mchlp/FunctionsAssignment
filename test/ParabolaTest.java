@@ -18,8 +18,8 @@ public class ParabolaTest {
     @Test
     public void test_toString() {
         Parabola parabola = new Parabola(2, 5, 1);
-        assertEquals("2.000(x - 1.000)^2 + 5.000", parabola.toString());
+        assertEquals("2.000*(x - 1.000)^2 + 5.000", parabola.toString());
         parabola = new Parabola(2, -5, -1);
-        assertEquals("2.000(x + 1.000)^2 - 5.000", parabola.toString());
+        assertEquals("2.000*(x + 1.000)^2 - 5.000", parabola.toString());
     }
 }

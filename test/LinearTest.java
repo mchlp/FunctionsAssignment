@@ -22,8 +22,8 @@ public class LinearTest {
     @Test
     public void test_toString() {
         Linear linear = new Linear(3, 5, 3);
-        assertEquals("3.000(x - 3.000) + 5.000", linear.toString());
+        assertEquals("3.000*(x - 3.000) + 5.000", linear.toString());
         linear = new Linear(2, 5, -5);
-        assertEquals("2.000(x + 5.000) + 5.000", linear.toString());
+        assertEquals("2.000*(x + 5.000) + 5.000", linear.toString());
     }
 }

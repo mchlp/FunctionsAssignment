@@ -29,16 +29,16 @@ public class Cubic extends Function {
 
     @Override
     protected double getFunctionValue(double x) {
-        return (this.a * Math.pow(x - this.x1, 3)) + (this.b * Math.pow(x - this.x1, 2)) + (this.c * (x - this.x1)) + this.c;
+        return (this.a * Math.pow(x - this.x1, 3)) + (this.b * Math.pow(x - this.x1, 2)) + (this.c * (x - this.x1)) + this.d;
     }
 
     @Override
     public double getDerivativeValue(double x) {
-        return (3*this.a*Math.pow(x-this.x1, 2)) + (2*this.b*(x-this.x1)) + this.c;
+        return (3 * this.a * Math.pow(x - this.x1, 2)) + (2 * this.b * (x - this.x1)) + this.c;
     }
 
     @Override
     public String toString() {
-        return String.format("%.3f(x %s)^3 %s(x %s)^2 %s(x %s) %s", this.a, formatNumber(this.x1, true), formatNumber(this.b, false), formatNumber(this.x1, true), formatNumber(this.c, false), formatNumber(this.x1, true), formatNumber(this.d, false));
+        return String.format(TO_STRING_NUMBER_FORMAT + "*(x %s)^3 %s*(x %s)^2 %s*(x %s) %s", this.a, formatNumber(this.x1, true), formatNumber(this.b, false), formatNumber(this.x1, true), formatNumber(this.c, false), formatNumber(this.x1, true), formatNumber(this.d, false));
     }
 }

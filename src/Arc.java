@@ -35,6 +35,6 @@ public class Arc extends Function {
 
     @Override
     public String toString() {
-        return String.format("√(%.3f^2 - (x %s)^2) %s", this.r, formatNumber(this.xcenter, true), formatNumber(this.ycenter, false));
+        return String.format("√(" + TO_STRING_NUMBER_FORMAT + "^2 - (x %s)^2) %s", this.r, formatNumber(this.xcenter, true), formatNumber(this.ycenter, false));
     }
 }

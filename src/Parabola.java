@@ -6,7 +6,7 @@
  */
 
 /**
- * Represents a parabolic function with parameters and methods to calculate the value of the function and its derivative at a point.
+ * Represents a parabola function with parameters and methods to calculate the value of the function and its derivative at a point.
  */
 
 public class Parabola extends Quadratic {
@@ -24,6 +24,6 @@ public class Parabola extends Quadratic {
 
     @Override
     public String toString() {
-        return String.format("%.3f(x %s)^2 %s", this.a, formatNumber(this.x1, true), formatNumber(this.b, false));
+        return String.format(TO_STRING_NUMBER_FORMAT+"*(x %s)^2 %s", this.a, formatNumber(this.x1, true), formatNumber(this.b, false));
     }
 }

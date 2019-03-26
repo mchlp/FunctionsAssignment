@@ -5,6 +5,10 @@
  * Course: ICS4U
  */
 
+/**
+ * Represents a quadratic function with parameters and methods to calculate the value of the function and its derivative at a point.
+ */
+
 public class Quadratic extends Function {
 
     private double a;
@@ -32,6 +36,6 @@ public class Quadratic extends Function {
 
     @Override
     public String toString() {
-        return String.format("%.3f(x %s)^2 %s(x %s) %s", this.a, formatNumber(this.x1, true), this.formatNumber(this.b, false), formatNumber(this.x1, true), formatNumber(this.c, false));
+        return String.format(TO_STRING_NUMBER_FORMAT+"*(x %s)^2 %s*(x %s) %s", this.a, formatNumber(this.x1, true), this.formatNumber(this.b, false), formatNumber(this.x1, true), formatNumber(this.c, false));
     }
 }

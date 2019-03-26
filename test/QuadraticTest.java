@@ -18,10 +18,10 @@ public class QuadraticTest {
     @Test
     public void test_toString() {
         Quadratic quadratic = new Quadratic(2, 5, 1, 1);
-        assertEquals("2.000(x - 1.000)^2 + 5.000(x - 1.000) + 1.000", quadratic.toString());
+        assertEquals("2.000*(x - 1.000)^2 + 5.000*(x - 1.000) + 1.000", quadratic.toString());
         quadratic = new Quadratic(-2, -5, -1, 1);
-        assertEquals("-2.000(x - 1.000)^2 - 5.000(x - 1.000) - 1.000", quadratic.toString());
+        assertEquals("-2.000*(x - 1.000)^2 - 5.000*(x - 1.000) - 1.000", quadratic.toString());
         quadratic = new Quadratic(2, 5, 1, -1);
-        assertEquals("2.000(x + 1.000)^2 + 5.000(x + 1.000) + 1.000", quadratic.toString());
+        assertEquals("2.000*(x + 1.000)^2 + 5.000*(x + 1.000) + 1.000", quadratic.toString());
     }
 }
