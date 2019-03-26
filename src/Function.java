@@ -1,8 +1,13 @@
 /*
  * Author: Michael Pu
  * Teacher: Mr. Radulovic
- * Date: 2019/3/19
+ * Date: 2019/3/25
  * Course: ICS4U
+ */
+
+/**
+ * An abstract class to be implemented by functions which represents the basic components present in every function.
+ * It includes a domain, name, colour, as well as abstract methods to be implemented by child classes.
  */
 
 public abstract class Function {
@@ -33,12 +38,21 @@ public abstract class Function {
     // To be called by class internally
     protected abstract double getFunctionValue(double x);
 
-    public abstract double derivative(double x);
+    // Returns NaN if undefined, otherwise calls getDerivativeValue in child class
+    public double derivative(double x) {
+        if (!undefined(x)) {
+            return getDerivativeValue(x);
+        }
+        return Double.NaN;
+    }
+
+    // To be called by class internally
+    protected abstract double getDerivativeValue(double x);
 
     public abstract String toString();
 
     public void setDomain(double x1, double x2) {
-        this.domain = new Domain(x1, x2, true, true);
+        setDomain(x1, x2, x1 != Double.NEGATIVE_INFINITY && x1 != Double.POSITIVE_INFINITY, x2 != Double.NEGATIVE_INFINITY && x2 != Double.POSITIVE_INFINITY);
     }
 
     public void setDomain(double x1, double x2, boolean includex1, boolean includex2) {
@@ -54,7 +68,7 @@ public abstract class Function {
     }
 
     public boolean undefined(double x) {
-        return this.domain.inDomain(x);
+        return !this.domain.inDomain(x);
     }
 
     public int getColour() {

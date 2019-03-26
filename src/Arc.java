@@ -1,8 +1,12 @@
 /*
  * Author: Michael Pu
  * Teacher: Mr. Radulovic
- * Date: 2019/3/19
+ * Date: 2019/3/25
  * Course: ICS4U
+ */
+
+/**
+ * Represents an arc function with parameters and methods to calculate the value of the function and its derivative at a point.
  */
 
 public class Arc extends Function {
@@ -24,8 +28,9 @@ public class Arc extends Function {
     }
 
     @Override
-    public double derivative(double x) {
+    public double getDerivativeValue(double x) {
         return -(x - this.xcenter) * Math.pow((this.r * this.r) - Math.pow(x - this.xcenter, 2), -0.5);
+        //return -(x - this.xcenter) * Math.pow(Math.pow(x - this.xcenter, 2) - (this.r * this.r), -0.5); // one given on classroom
     }
 
     @Override

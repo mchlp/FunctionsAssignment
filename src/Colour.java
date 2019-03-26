@@ -1,19 +1,23 @@
 /*
  * Author: Michael Pu
  * Teacher: Mr. Radulovic
- * Date: 2019/3/19
+ * Date: 2019/3/25
  * Course: ICS4U
+ */
+
+/**
+ * Represents a colour by storing RGB values (each one byte) in the left-most three bits of an integer.
  */
 
 public class Colour {
 
-    public static final int RED_MASK = 0xFF0000;
-    public static final int GREEN_MASK = 0xFF00;
-    public static final int BLUE_MASK = 0xFF;
+    public static final int RED_MASK = 0xFF000000;
+    public static final int GREEN_MASK = 0xFF0000;
+    public static final int BLUE_MASK = 0xFF00;
 
-    public static final int RED_SHIFT = 16;
-    public static final int GREEN_SHIFT = 8;
-    public static final int BLUE_SHIFT = 0;
+    public static final int RED_SHIFT = 24;
+    public static final int GREEN_SHIFT = 16;
+    public static final int BLUE_SHIFT = 8;
 
     private int rgb;
 

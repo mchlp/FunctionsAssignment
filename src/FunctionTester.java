@@ -1,17 +1,24 @@
 /*
  * Author: Michael Pu
  * Teacher: Mr. Radulovic
- * Date: 2019/3/19
+ * Date: 2019/3/25
  * Course: ICS4U
+ */
+
+/**
+ * Class to test function classes.
  */
 
 public class FunctionTester {
 
     public static void main(String[] args) {
 
+        Linear linear = new Linear(1, 0, 0);
+
+
         Parabola parabola = new Parabola(1, 0, 0);
 
-        Linear linear = new Linear(1, 1, 0);
+
 
         Arc arc = new Arc(4, 0, -2);
 

@@ -1,8 +1,12 @@
 /*
  * Author: Michael Pu
  * Teacher: Mr. Radulovic
- * Date: 2019/3/19
+ * Date: 2019/3/25
  * Course: ICS4U
+ */
+
+/**
+ * Represents a linear function with parameters and methods to calculate the value of the function and its derivative at a point.
  */
 
 public class Linear extends Function {
@@ -24,7 +28,7 @@ public class Linear extends Function {
     }
 
     @Override
-    public double derivative(double x) {
+    public double getDerivativeValue(double x) {
         return m;
     }
 

@@ -1,8 +1,12 @@
 /*
  * Author: Michael Pu
  * Teacher: Mr. Radulovic
- * Date: 2019/3/19
+ * Date: 2019/3/25
  * Course: ICS4U
+ */
+
+/**
+ * Represents a parabolic function with parameters and methods to calculate the value of the function and its derivative at a point.
  */
 
 public class Parabola extends Quadratic {

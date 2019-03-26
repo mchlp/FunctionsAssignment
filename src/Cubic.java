@@ -1,8 +1,13 @@
 /*
  * Author: Michael Pu
  * Teacher: Mr. Radulovic
- * Date: 2019/3/19
+ * Date: 2019/3/25
  * Course: ICS4U
+ */
+
+
+/**
+ * Represents a cubic function with parameters and methods to calculate the value of the function and its derivative at a point.
  */
 
 public class Cubic extends Function {
@@ -28,7 +33,7 @@ public class Cubic extends Function {
     }
 
     @Override
-    public double derivative(double x) {
+    public double getDerivativeValue(double x) {
         return (3*this.a*Math.pow(x-this.x1, 2)) + (2*this.b*(x-this.x1)) + this.c;
     }
 

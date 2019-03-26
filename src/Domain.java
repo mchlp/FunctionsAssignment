@@ -1,8 +1,12 @@
 /*
  * Author: Michael Pu
  * Teacher: Mr. Radulovic
- * Date: 2019/3/19
+ * Date: 2019/3/25
  * Course: ICS4U
+ */
+
+/**
+ * Represents a domain with the ability to specify start and endpoints as well as if those start and end points are included in the domain.
  */
 
 public class Domain {
@@ -35,7 +39,7 @@ public class Domain {
             insideEnd = getEnd() > check;
         }
 
-        return !(insideStart && insideEnd);
+        return insideStart && insideEnd;
     }
 
     public double getStart() {

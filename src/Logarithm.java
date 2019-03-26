@@ -1,8 +1,12 @@
 /*
  * Author: Michael Pu
  * Teacher: Mr. Radulovic
- * Date: 2019/3/19
+ * Date: 2019/3/25
  * Course: ICS4U
+ */
+
+/**
+ * Represents a natural logarithmic function with parameters and methods to calculate the value of the function and its derivative at a point.
  */
 
 public class Logarithm extends Function {
@@ -12,7 +16,7 @@ public class Logarithm extends Function {
     private double x1;
 
     public Logarithm(double a, double b, double x1) {
-        super(a > 0 ? x1 : Double.NEGATIVE_INFINITY, a > 0 ? Double.POSITIVE_INFINITY : x1, a > 0, a <= 0);
+        super(a > 0 ? x1 : Double.NEGATIVE_INFINITY, a > 0 ? Double.POSITIVE_INFINITY : x1);
         this.a = a;
         this.b = b;
         this.x1 = x1;
@@ -24,7 +28,7 @@ public class Logarithm extends Function {
     }
 
     @Override
-    public double derivative(double x) {
+    public double getDerivativeValue(double x) {
         return (this.a) / (x - this.x1);
     }
 
