@@ -36,6 +36,6 @@ public class Quadratic extends Function {
 
     @Override
     public String toString() {
-        return String.format(TO_STRING_NUMBER_FORMAT+"*(x %s)^2 %s*(x %s) %s", this.a, formatNumber(this.x1, true), this.formatNumber(this.b, false), formatNumber(this.x1, true), formatNumber(this.c, false));
+        return String.format(TO_STRING_NUMBER_FORMAT+"*(x %s)^2 %s*(x %s) %s", this.a, formatNumber(this.x1, true), formatNumber(this.b, false), formatNumber(this.x1, true), formatNumber(this.c, false));
     }
 }
