@@ -1,4 +1,4 @@
-#Functions Assignment
+# Functions Assignment
  * Author: Michael Pu
  * Teacher: Mr. Radulovic
  * Date: 2019/3/25
